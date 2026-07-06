@@ -152,21 +152,6 @@ cmake --build .
 ./matching_engine ../data/sample.bin
 ```
 
----
-
-## Flamegraph
-
-```bash
-# Record with perf (Linux)
-sudo perf record -g ./bench_order_book
-sudo perf script | stackcollapse-perf.pl | flamegraph.pl > flamegraph.svg
-
-# Or with Valgrind (WSL2)
-valgrind --tool=callgrind ./bench_order_book
-kcachegrind callgrind.out.*
-```
-
----
 
 ## Project Structure
 
